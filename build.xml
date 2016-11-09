@@ -1,4 +1,4 @@
-h<project default="clean">
+<project default="clean">
 	<property name="src.dir"    value="src"/>
 	<property name="bin.dir"    value="bin"/>
 	<property name="jar.dir"    value="exe"/>
