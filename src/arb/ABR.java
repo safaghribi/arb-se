@@ -25,6 +25,9 @@ public  class ABR extends java.lang.Object{
 	}
 	public ArrayList<Point> v;
 	
+	/*
+	* Constructs an empty ABR
+	*/
 	public void ABR(ArrayList<Point> points){
 		this.v=points;
 		buildTree(points);
@@ -43,11 +46,17 @@ public  class ABR extends java.lang.Object{
 	}
 
 	
-	 
+	 /*
+	 * Returns true if this ABR contains no elements
+	 */
 	public boolean isEmpty(){
 		return(v.size()==0);
 	}
 	
+	
+	/*
+	* Adds the specified element to this ABR if it is not already present
+	*/
 	public void insert(int value){
 		
 		Point p= new Point(value);
@@ -56,11 +65,18 @@ public  class ABR extends java.lang.Object{
 		
 	}
 	
+	/*
+	* Returns the number of element in this ABR
+	*/
 	public int nbElements(){
 		return(v.size());
 		
 	}
 	
+	
+	/*
+	*Returns true if this ABR contains the specified element
+	*/
 	public boolean contains(int value){
 		boolean test=false;
 		int i=0;
@@ -71,6 +87,10 @@ public  class ABR extends java.lang.Object{
 		return(test);
 	}
 	
+	
+	/*
+	*Fill a list with the elements in this ABR in ascending order.
+	*/
 	public void toList(java.util.List<java.lang.Integer> l){
 		Collections.sort(v,new Comparator<Point>() {
 			@Override
