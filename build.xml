@@ -39,6 +39,14 @@ h<project default="clean">
 	<java jar="${jar.dir}/${jar-name}" fork="true"/>
 </target>
 
+	
+	<target name="javadoc">
+		<javadoc sourcepath="src" destdir="doc">
+			<fileset dir="src" defaultexcludes="yes">
+				<include name="**"/>
+			</fileset>
+		</javadoc>
+	</target>
 
 
 </project>
